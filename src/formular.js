@@ -7,21 +7,22 @@ function completat(camp){
     return element.value.trim() !== "";
 }
 
+
+
+
 function necompletat(camp) {
     const element = document.getElementById(camp);
-    if (element){
         if (!completat(camp)){
-            const marcator = document.createElement("span");
+            const marcator = document.createElement("paragraph");
             marcator.innerHTML = "X";
             element.parentNode.insertBefore(marcator, element.nextSibling);
         }
         else{
-            if (document.body.contains(marcator)){
-                console.log("sdsddssd");
-            }
-            
+            const marcator = document.createElement("paragraph");
+            marcator.innerHTML = "a";
+            element.parentNode.insertBefore(marcator, element.nextSibling);          
         }
-    }
+    
 }
 
 IMPORTANTE.forEach(camp => {
