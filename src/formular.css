@@ -1,0 +1,16 @@
+.formular-input{
+    position: absolute;
+    left:15rem;
+}
+.formular {
+    margin: 1%;
+}
+.formular-adresa {
+    margin-right: 0.5%;
+    padding: 0.5%;
+    display: inline-block;
+}
+
+.important {
+    color: red;
+}
