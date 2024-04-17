@@ -11,21 +11,21 @@
 <body>
     <h1>Formular generare fisier .pdf</h1>
 
-        <div  class="formular"><h2>Numele si prenumele clientului</h2>
+        <div  class="formular" id="numele-div"><h2>Numele si prenumele clientului</h2>
             <label for="numele">Numele<span class="important">*</span> (min. 3 car.)</label>
-            <input type="text" name="numele" required minlength="3" class="formular-input" id="numele" placeholder="Scrie aici numele de familie">
+            <input type="text" name="numele"  class="formular-input" id="numele" placeholder="Scrie aici numele de familie">
         </div>
         <div  class="formular">
-            <label for="prenumele">Prenumele<span class="important">*</span> (min. 3 car.)</label>
-            <input type="text" name="prenumele" required minlength="3" class="formular-input" id="prenumele" placeholder="Scrie aici prenumele">
+            <label for="prenumele" id="prenumele-div">Prenumele<span class="important">*</span> (min. 3 car.)</label>
+            <input type="text" name="prenumele"  class="formular-input" id="prenumele" placeholder="Scrie aici prenumele">
         </div>
 
         <div class="formular-adresa"><h2>Adresa clientului</h2>
-            <div  class="formular-adresa">
-                <label for="strada">Strada<span class="important">*</span>(min. 3 car.)</label>
-                <input type="text" name="strada" required minlength="3" id="strada">
+            <div  class="formular-adresa" id="strada-div">
+                <label for="strada" >Strada<span class="important">*</span>(min. 3 car.)</label>
+                <input type="text" name="strada" id="strada">
             </div>
-            <div class="formular-adresa" >
+            <div class="formular-adresa" id="numarul-div">
                 <label for="numarul">Numarul<span class="important">*</span></label>
                 <input type="text" name="numarul" id="numarul" size="1" required minlength="1">
             </div>
@@ -38,10 +38,10 @@
                 <input type="text" id="apartament" name="apartament" size="1">
             </div>
             <div class="formular-adresa">
-                <label for="loc">Localitatea<span class="important">*</span></label>
+                <label for="loc" id="loc-div">Localitatea<span class="important">*</span></label>
                 <input type="text" name="loc" id="loc" required minlength="1">
             </div>
-            <div class="formular-adresa">
+            <div class="formular-adresa" id="jud-div">
                 <label for="jud">Selecteaza judetul<span class="important">*</span></label>
                 <select name="jud" id="jud">
                     <option value=""><span style="align-content: center">--Judetul--</span></option>
