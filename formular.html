@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en, ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/formular.css">
     <title>Formular inscriere</title>
-    <!--<script src="https://unpkg.com/react@17/umd/react.development.js"></script>-->
-    <!--<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>-->
 </head>
 <body>
-    <h1>Formular generare fisier .pdf</h1>
+    <h1>Formular generare instiintare datorii la diferite institutii (fisier .pdf)</h1>
 
         <div  class="formular" id="numele-div"><h2>Numele si prenumele clientului</h2>
-            <label for="numele">Numele<span class="important">*</span> (min. 3 car.)</label>
+            <label for="numele">Numele<span class="important">*</span> (min. 3 litere)</label>
             <input type="text" name="numele"  class="formular-input" id="numele" placeholder="Scrie aici numele de familie">
         </div>
-        <div  class="formular">
-            <label for="prenumele" id="prenumele-div">Prenumele<span class="important">*</span> (min. 3 car.)</label>
+        <div  class="formular" id="prenumele-div">
+            <label for="prenumele">Prenumele<span class="important">*</span> (min. 3 litere)</label>
             <input type="text" name="prenumele"  class="formular-input" id="prenumele" placeholder="Scrie aici prenumele">
         </div>
 
         <div class="formular-adresa"><h2>Adresa clientului</h2>
             <div  class="formular-adresa" id="strada-div">
-                <label for="strada" >Strada<span class="important">*</span>(min. 3 car.)</label>
-                <input type="text" name="strada" id="strada">
+                <label for="strada" >Strada<span class="important">*</span>(min. 3 car. fara numere)</label>
+                <input type="text" name="strada" id="strada" required minlength="3">
             </div>
             <div class="formular-adresa" id="numarul-div">
                 <label for="numarul">Numarul<span class="important">*</span></label>
@@ -38,8 +36,8 @@
                 <input type="text" id="apartament" name="apartament" size="1">
             </div>
             <div class="formular-adresa">
-                <label for="loc" id="loc-div">Localitatea<span class="important">*</span></label>
-                <input type="text" name="loc" id="loc" required minlength="1">
+                <label for="localitate" id="loc-div">Localitatea<span class="important">*</span>(fara numere)</label>
+                <input type="text" name="localitate" id="localitate" required minlength="1">
             </div>
             <div class="formular-adresa" id="jud-div">
                 <label for="jud">Selecteaza judetul<span class="important">*</span></label>
@@ -90,7 +88,7 @@
                 </select>
             </div>
         </div>
-        <script src="./src/formular.js"></script>
+        <script text="text" src="./src/formular.js"></script>
         
         
 </body>
