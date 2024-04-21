@@ -23,7 +23,7 @@ fiecare camp (din toate elementele de tip input)
             alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina minim trei litere`);
             var_bool = false;
             element.value = "";
-            elem.focus();
+            document.getElementById("blocul").focus();
             //return var_bool;
         }
         for (var i = 0; i < element.value.trim().length; i++){
@@ -31,7 +31,7 @@ fiecare camp (din toate elementele de tip input)
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} nu este permis sa contina numere sau simboluri`);
                 var_bool = false;
                 element.value = "";
-                elem.focus();
+                document.getElementById("blocul").focus();
                 break;
                 //return var_bool;
             }
@@ -43,7 +43,7 @@ fiecare camp (din toate elementele de tip input)
             alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina minim trei litere`);
             var_bool = false;
             element.value = "";
-            elem.getElementById(camp).focus();
+            document.getElementById("blocul").focus();
             //return var_bool;
         }
         for (var i = 0; i < element.value.trim().length; i++){
@@ -51,7 +51,7 @@ fiecare camp (din toate elementele de tip input)
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} nu este permis sa contina numere sau simboluri`);
                 var_bool = false;
                 element.value = "";
-                elem.focus();
+                document.getElementById("blocul").focus();
                 break;
                 //return var_bool;
             }
@@ -62,7 +62,7 @@ fiecare camp (din toate elementele de tip input)
             alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina minim trei litere`);
             var_bool = false;
             element.value = "";
-            elem.focus();
+            document.getElementById("blocul").focus();
             //return var_bool;
             }
         for (i = 0; i < element.value.trim().length; i++){
@@ -70,7 +70,7 @@ fiecare camp (din toate elementele de tip input)
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} nu este permis sa contina cifre`);
                 var_bool = false;
                 element.value = "";
-                elem.focus();
+                document.getElementById("blocul").focus();
                 break;
                 //return var_bool;
             }
@@ -83,7 +83,7 @@ fiecare camp (din toate elementele de tip input)
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} nu este permis sa contina cifre`);
                 var_bool = false;
                 element.value = "";
-                elem.focus();
+                document.getElementById("blocul").focus();
                 break;
                 //return var_bool;
             }
@@ -93,7 +93,7 @@ fiecare camp (din toate elementele de tip input)
             alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina minim trei litere`);
             var_bool = false;
             element.value = "";
-            elem.focus();
+            document.getElementById("blocul").focus();
             //return var_bool;
         }
         
@@ -103,7 +103,7 @@ fiecare camp (din toate elementele de tip input)
             alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina cel putin o cifra`);
             var_bool = false;
             element.value = "";
-            elem.focus();
+            document.getElementById("blocul").focus();
         }
         for (var i = 0; i <= element.value.trim().length; i++){
             if (!isNaN(element.value.trim()[i])){
@@ -112,7 +112,7 @@ fiecare camp (din toate elementele de tip input)
             else if (i == (element.value.trim().length - 1)){
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} trebuie sa contina cel putin o cifra`);
                 element.value = "";
-                elem.focus();
+                document.getElementById("blocul").focus();
             }            
         }
 
@@ -120,7 +120,7 @@ fiecare camp (din toate elementele de tip input)
     else if (camp == "jud"){
         if (element.value.trim() == ""){
             alert(`Te rog selecteaza un judet`);
-            
+            document.getElementById("blocul").focus();
         }
     }
 }
