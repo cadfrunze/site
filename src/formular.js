@@ -157,8 +157,10 @@ fiecare camp (din toate elementele de tip input)
     for (let elem1 in elemente_importante){
         console.log(elem1 + ": " + elemente_importante[elem1]);
     }
-    if (elemente_importante["numele"] == true && elemente_importante["prenumele"] == true && elemente_importante["strada"] == true && elemente_importante["numarul"] == true && elemente_importante["localitate"] == true && elemente_importante["jud"] == true){
-
+    if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
+        const elementButton = document.createElement("button");
+        elementButton.textContent = "Genereaza Instiintare";
+        document.body.appendChild(elementButton);
     }
 }
 
