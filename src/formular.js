@@ -25,6 +25,9 @@ fiecare camp (din toate elementele de tip input)
     const element = document.getElementById(camp);
     //console.log(element.value.trim());
     if (camp == "numele"){
+        // element.addEventListener("input", function() {
+        //     console.log("utilizatorul scrie")
+        // })
         for (var i = 0; i < element.value.trim().length; i++){
             if (!isNaN(element.value.trim()[i]) || !element.value.trim()[i].match(/[a-zA-Z]/)){
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} nu este permis sa contina numere sau simboluri`);
@@ -181,7 +184,7 @@ function handler(camp)
 /* Vezi iterarea, returneaza o functie anonima
 pt acel event de la addEventListener
 */
-{
+{   
     return function () {verificaCamp(camp)};
 }
 
@@ -189,7 +192,12 @@ IMPORTANTE.forEach(camp => {
     elem = document.getElementById(camp);
     const handlerFunction = handler(camp);
     elem.addEventListener("blur", handlerFunction, {once:false}); // eventul asteapta pana userul trece la urmatorul camp
-    
+    elem.addEventListener("input", function(){
+        console.log("sunt aici")
+        let popup = document.getElementById("numeP");
+        popup.classList.toggle("show");
+        
+    })
 });
 
 
