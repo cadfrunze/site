@@ -153,14 +153,25 @@ fiecare camp (din toate elementele de tip input)
             elemente_importante[camp] = true;
         }
     }
-    console.clear();
-    for (let elem1 in elemente_importante){
-        console.log(elem1 + ": " + elemente_importante[elem1]);
-    }
+    // console.clear();
+    // for (let elem1 in elemente_importante){
+    //     console.log(elem1 + ": " + elemente_importante[elem1]);
+    // }
     if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
-        const elementButton = document.createElement("button");
-        elementButton.textContent = "Genereaza Instiintare";
-        document.body.appendChild(elementButton);
+        let elementButton = document.getElementById("genereaza");
+        if (!elementButton){
+            elementButton = document.createElement("button");
+            elementButton.id = "genereaza";
+            elementButton.textContent = "Genereaza Instiintare";
+            document.body.appendChild(elementButton);
+        }
+        
+    }
+    else {
+        elementButton = document.getElementById("genereaza");
+        if (elementButton){
+            elementButton.remove();
+        }
     }
 }
 
