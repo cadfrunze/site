@@ -192,12 +192,54 @@ IMPORTANTE.forEach(camp => {
     elem = document.getElementById(camp);
     const handlerFunction = handler(camp);
     elem.addEventListener("blur", handlerFunction, {once:false}); // eventul asteapta pana userul trece la urmatorul camp
-    elem.addEventListener("input", function(){
-        console.log("sunt aici")
-        let popup = document.getElementById("numeP");
-        popup.classList.toggle("show");
-        
-    })
+    elem.addEventListener("focus", function() {
+        if (camp == "numele") {
+            let elemStyle = document.getElementById("numeP");
+            elemStyle.style.display = "inline-block"; // Afișează pop-up-ul
+        }
+        else if (camp == "prenumele"){
+            let elemStyle = document.getElementById("prenumeP");
+            elemStyle.style.display = "inline-block";
+        }
+        else if (camp == "strada"){
+            let elemStyle = document.getElementById("stradaP");
+            // top: 40px; left: 40px;
+            elemStyle.style.position = "static";
+            elemStyle.style.display = "inline-block";
+        }
+        else if (camp == "numarul"){
+            let elemStyle = document.getElementById("numarulP");
+            elemStyle.style.position = "static";
+            elemStyle.style.display = "inline-block";
+        }
+        else if (camp == "localitate"){
+            let elemStyle = document.getElementById("localitateP");
+            elemStyle.style.position = "static";
+            elemStyle.style.display = "inline-block";
+        }
+    });
+    elem.addEventListener("blur", function() {
+        if (camp == "numele") {
+            let elemStyle = document.getElementById("numeP");
+            elemStyle.style.display = "none"; // Ascunde pop-up-ul
+        }
+        else if (camp == "prenumele"){
+            let elemStyle = document.getElementById("prenumeP");
+            elemStyle.style.display = "none";
+        }
+        else if (camp == "strada"){
+            let elemStyle = document.getElementById("stradaP");
+            elemStyle.style.display = "none";
+        }
+        else if (camp == "numarul"){
+            let elemStyle = document.getElementById("numarulP");
+            elemStyle.style.display = "none";
+        }
+        else if (camp == "localitate"){
+            let elemStyle = document.getElementById("localitateP");
+            elemStyle.style.display = "none";
+        }
+    });
 });
 
 

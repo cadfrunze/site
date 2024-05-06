@@ -1,11 +1,13 @@
 .formular-input{
-    position: absolute;
+    position: static;
     left:15rem;
+    display: inline-block;
 }
 .formular {
     margin: 1%;
 }
 .formular-adresa {
+    position: static;
     margin-right: 0.5%;
     padding: 0.5%;
     display: inline-block;
@@ -25,22 +27,9 @@ button {
 }
 
 .popuptext {
-    top: 4rem;
-    left: 4rem;
-    right: 50rem;
-    position: relative;
+    position: static;
+    left: 50rem;
     background-color: grey;
-    top: 20px;
-}
-
-/* Stilurile pentru mesaj */
-.show::before {
-    border: 1rem;
-    content: "Introduceți numele";
     color: red;
-}
-
-/* Ascunde mesajul atunci când câmpul primește focus */
-.popuptext:focus:after {
-    display: none;
+    display: none; /* ascuns */
 }
