@@ -7,29 +7,27 @@
     <title>Formular inscriere</title>
 </head>
 <body>
-    <h1>Formular generare instiintare datorii la diferite institutii (fisier .pdf)</h1>
-
-        <div  class="formular" id="numele-div"><h2>Numele si prenumele clientului</h2>
-            <label for="numele">Numele<span class="important">*</span> (min. 3 litere)</label>
+    <h1 style="text-align: center; color: red;">Formular generare instiintare datorii financiare la diferite institutii (fisier .pdf)</h1>
+        <div  class="formular" id="persoana"><h2 style="color: blue;">Numele si prenumele clientului</h2>
+            <label for="numele">Numele<span class="important">*</span></label>
             <input type="text" name="numele"  class="formular-input" id="numele" placeholder="Scrie aici numele de familie">
-            <div id="numeP" class="popuptext">Introduceți doar litere</div>
+            <div id="numeP" class="popuptext"></div>
         </div>
-        <div  class="formular" id="prenumele-div">
-            <label for="prenumele">Prenumele<span class="important">*</span> (min. 3 litere)</label>
+        <div  class="formular" id="persoana">
+            <label for="prenumele">Prenumele<span class="important">*</span></label>
             <input type="text" name="prenumele"  class="formular-input" id="prenumele" placeholder="Scrie aici prenumele">
-            <div id="prenumeP" class="popuptext">Introduceți doar litere</div>
+            <div id="prenumeP" class="popuptext">Prenumele: Introduceți doar litere</div>
         </div>
-
-        <div class="formular-adresa"><h2>Adresa clientului</h2>
+        <div class="formular-adresa"><h2 style="color: blue;">Adresa clientului</h2>
             <div  class="formular-adresa" id="strada-div">
-                <label for="strada" >Strada<span class="important">*</span>(min. 3 car. fara numere)</label>
+                <label for="strada" >Strada<span class="important">*</span></label>
                 <input type="text" name="strada" id="strada" required minlength="3">
                 <div id="stradaP" class="popuptext">Fara cifre</div>
             </div>
             <div class="formular-adresa" id="numarul-div">
                 <label for="numarul">Numarul<span class="important">*</span></label>
                 <input type="text" name="numarul" id="numarul" size="1" required minlength="1">
-                <div id="numarulP" class="popuptext">Cel putin un numar</div>
+                <div id="numarulP" class="popuptext">Cel putin o cifra</div>
             </div>
             <div  class="formular-adresa">
                 <label for="blocul">Bloc</label>
@@ -40,7 +38,7 @@
                 <input type="text" id="apartament" name="apartament" size="1">
             </div>
             <div class="formular-adresa">
-                <label for="localitate" id="loc-div">Localitatea<span class="important">*</span>(fara numere)</label>
+                <label for="localitate" id="loc-div">Localitatea<span class="important">*
                 <input type="text" name="localitate" id="localitate" required minlength="1">
                 <div id="localitateP" class="popuptext">Fara cifre</div>
             </div>

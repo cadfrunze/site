@@ -2,6 +2,7 @@
     position: static;
     left:15rem;
     display: inline-block;
+    zoom: 1;
 }
 .formular {
     margin: 1%;
