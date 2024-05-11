@@ -364,6 +364,7 @@ IMPORTANTE.forEach(camp => {
                     else{
                         numeP.style.color = "green";
                         numeP.textContent = "✓";
+                        elemente_importante[camp] = true;
                     }
                 }  
             }
