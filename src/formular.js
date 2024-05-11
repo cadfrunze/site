@@ -65,10 +65,12 @@ fiecare camp (din toate elementele de tip input)
                         elemente_importante[camp] = false;
                         break;
                     }
-                    numeP.style.color = "red";
-                    numeP.textContent = "✘";
-                    elemente_importante[camp] = false;
-                    break;
+                    else{
+                        numeP.style.color = "red";
+                        numeP.textContent = "✘";
+                        elemente_importante[camp] = false;
+                        break;
+                    }
                     }
                 else{
                     numeP.style.color = "green";
