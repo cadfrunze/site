@@ -28,11 +28,9 @@ let elemente_importante = {
 function generareButton(){
     // Genereare el. html de tip button daca toate elemente_importante sunt adevarate!
     if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
-        console.log("sunt adevarat");
         return document.getElementById("butonul").style.display = "block";
     }
     else {
-        console.log("sunt fals")
         return document.getElementById("butonul").style.display = "none";
     }
 }
@@ -84,7 +82,7 @@ fiecare camp (din toate elementele de tip input)
             for (var i = 0; i < element.value.length; i++){
                 if (!isNaN(element.value.trim()[i]) || !element.value[i].match(/[a-zA-Z]/)){
                     if (element.value[i] == " " || element.value.trim()[i] == "-"){
-                        prenumeP.style.color = "green";
+                        prenumeP.style.color = "blue";
                         prenumeP.textContent = "✓";
                         elemente_importante[camp] = true;
                     }
@@ -125,7 +123,7 @@ fiecare camp (din toate elementele de tip input)
                             break;
                         }
                         else{
-                            stradaP.style.color = "green";
+                            stradaP.style.color = "blue";
                             stradaP.innerHTML = `✓`;
                             elemente_importante[camp] = true;
                         }
