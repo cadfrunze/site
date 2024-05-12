@@ -1,3 +1,4 @@
+document.getElementById("butonul").style.display = "none";
 
 const IMPORTANTE = ["numele", "prenumele", "strada", "numarul", "localitate", "jud"]; // cele marcate din html cu *
 // ---------------------------------------------------------------------------//
@@ -27,20 +28,12 @@ let elemente_importante = {
 function generareButton(){
     // Genereare el. html de tip button daca toate elemente_importante sunt adevarate!
     if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
-        let elementButton = document.getElementById("genereaza");
-        if (!elementButton){
-            elementButton = document.createElement("button");
-            elementButton.id = "genereaza";
-            elementButton.textContent = "Genereaza Instiintare";
-            return document.body.appendChild(elementButton);
-        }
-        
+        console.log("sunt adevarat");
+        return document.getElementById("butonul").style.display = "block";
     }
     else {
-        elementButton = document.getElementById("genereaza");
-        if (elementButton){
-            return elementButton.remove();
-        }
+        console.log("sunt fals")
+        return document.getElementById("butonul").style.display = "none";
     }
 }
 // -----------------------------------------------------------------------------------------------------------------------------------------------//
