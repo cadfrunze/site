@@ -4,6 +4,14 @@
     display: inline-block;
     zoom: 1;
 }
+#img1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 .formular {
     margin: 1%;
 }
@@ -28,9 +36,11 @@ button {
 }
 
 .popuptext {
+    background-color: black;
+    font-size: large;
+    font-family: "Goudy Bookletter 1911", sans-serif;
     position: static;
     left: 50rem;
-    background-color: grey;
     color: red;
     display: none; /* ascuns */
 }

@@ -50,7 +50,7 @@ fiecare camp (din toate elementele de tip input)
 */
 {   const element = document.getElementById(camp);
     if (camp == "numele"){
-        numeP.style.backgroundColor = "white";
+        numeP.style.backgroundColor = "initial";
         if (element.value.trim().length < 3){
             numeP.style.color = "red";
             numeP.textContent = "✘";
@@ -73,7 +73,7 @@ fiecare camp (din toate elementele de tip input)
                     }
                     }
                 else{
-                    numeP.style.color = "green";
+                    numeP.style.color = "blue";
                     numeP.textContent = "✓";
                     elemente_importante[camp] = true;
                     }
@@ -81,7 +81,7 @@ fiecare camp (din toate elementele de tip input)
         }
         }
     if (camp == "prenumele"){
-        prenumeP.style.backgroundColor = "white";
+        prenumeP.style.backgroundColor = "initial";
         if (element.value.trim().length < 3){
             prenumeP.style.color = "red";
             prenumeP.textContent = "✘";
@@ -103,7 +103,7 @@ fiecare camp (din toate elementele de tip input)
                     }
                 }
                 else{
-                    prenumeP.style.color = "green";
+                    prenumeP.style.color = "blue";
                     prenumeP.textContent = "✓";
                     elemente_importante[camp] = true;
                 }
@@ -112,7 +112,7 @@ fiecare camp (din toate elementele de tip input)
     }
     else if (camp == "strada"){
         let contor = 0;
-        stradaP.style.backgroundColor = "white";
+        stradaP.style.backgroundColor = "initial";
         stradaP.style.position = "static";
         stradaP.style.display = "inline-block";
         if (element.value.length < 3){
@@ -154,7 +154,7 @@ fiecare camp (din toate elementele de tip input)
                     }
                 }
                 else{
-                    stradaP.style.color = "green";
+                    stradaP.style.color = "blue";
                     stradaP.innerHTML = `✓`;
                     elemente_importante[camp] = true;
                 }
@@ -163,7 +163,7 @@ fiecare camp (din toate elementele de tip input)
     }
     else if (camp == "localitate"){
         let contor = 0;
-        localitateP.style.backgroundColor = "white";
+        localitateP.style.backgroundColor = "initial";
         localitateP.style.position = "static";
         localitateP.style.display = "inline-block";
         if (element.value.length < 3){
@@ -183,7 +183,7 @@ fiecare camp (din toate elementele de tip input)
                             break;
                         }
                         else{
-                            localitateP.style.color = "green";
+                            localitateP.style.color = "blue";
                             localitateP.innerHTML = `✓`;
                             elemente_importante[camp] = true;
                         }
@@ -206,7 +206,7 @@ fiecare camp (din toate elementele de tip input)
                     }
                 }
                 else{
-                    localitateP.style.color = "green";
+                    localitateP.style.color = "blue";
                     localitateP.innerHTML = `✓`;
                     elemente_importante[camp] = true;
                 }
@@ -215,21 +215,23 @@ fiecare camp (din toate elementele de tip input)
         
     }
     else if (camp == "numarul"){
-        numarulP.style.backgroundColor = "white";
+        numarulP.style.backgroundColor = "initial";
         numarulP.style.color = "red";
         numarulP.style.position = "static";
         numarulP.style.display = "inline-block";
         numarulP.innerHTML = `✘`
         if ((element.value.trim().length <= 1) && isNaN(element.value.trim()) || element.value.trim() == ""){
             numarulP.innerHTML = `✘`;
+            elemente_importante[camp] = false;
         }
         else if (element.value.trim().length > 4){
-            numarulP.innerHTML = `✘`
+            numarulP.innerHTML = `✘`;
+            elemente_importante[camp] = false;
         }
         else{
             for (var i = 0; i <= element.value.trim().length; i++){
                 if (!isNaN(element.value.trim()[i])){
-                    numarulP.style.color = "green";
+                    numarulP.style.color = "blue";
                     numarulP.innerHTML = `✓`;
                     elemente_importante[camp] = true;
                     break;
@@ -245,7 +247,7 @@ fiecare camp (din toate elementele de tip input)
 
     }
     else if (camp == "jud"){
-        judP.style.backgroundColor = "white";
+        judP.style.backgroundColor = "initial";
         judP.style.color = "red";
         judP.style.position = "static";
         judP.style.display = "inline-block";
@@ -254,7 +256,7 @@ fiecare camp (din toate elementele de tip input)
             elemente_importante[camp] = false;
         }
         else{
-            judP.style.color = "green";
+            judP.style.color = "blue";
             judP.innerHTML = `✓`;
             elemente_importante[camp] = true;
         }
@@ -280,19 +282,19 @@ IMPORTANTE.forEach(camp => {
     elem.addEventListener("input", handlerFunction, {once:false}); // eventul asteapta pana userul trece la urmatorul camp
     elem.addEventListener("focus", function() {
         if (camp == "numele") {
-            numeP.style.background = "grey";
+            numeP.style.background = "black";
             numeP.style.color = "red";
             numeP.textContent = "Numele: Introduceți doar litere (ATENTIE!: minim 3 litere!, FARA caractere speciale!, FARA cifre!)";
             numeP.style.display = "inline-block"; // Afișează pop-up-ul
         }
         else if (camp == "prenumele"){
-            prenumeP.style.background = "grey";
+            prenumeP.style.background = "black";
             prenumeP.style.color = "red";
             prenumeP.textContent = "Prenume: Introduceți doar litere (ATENTIE!: minim 3 litere!, FARA cifre!)";
             prenumeP.style.display = "inline-block";
         }
         else if (camp == "strada"){
-            stradaP.style.backgroundColor = "grey";
+            stradaP.style.backgroundColor = "black";
             stradaP.style.color = "red";
             stradaP.style.bottom = "10%";
             stradaP.style.left = "1%";
@@ -301,7 +303,7 @@ IMPORTANTE.forEach(camp => {
             stradaP.style.display = "grid";
         }
         else if (camp == "numarul"){
-            numarulP.style.backgroundColor = "grey";
+            numarulP.style.backgroundColor = "black";
             numarulP.style.color = "red";
             numarulP.style.bottom = "10%";
             numarulP.style.left = "1%";
@@ -310,7 +312,7 @@ IMPORTANTE.forEach(camp => {
             numarulP.style.display = "grid";
         }
         else if (camp == "localitate"){
-            localitateP.style.backgroundColor = "grey";
+            localitateP.style.backgroundColor = "black";
             localitateP.style.color = "red";
             localitateP.style.bottom = "10%";
             localitateP.style.left = "1%";
@@ -319,7 +321,7 @@ IMPORTANTE.forEach(camp => {
             localitateP.style.display = "grid";
         }
         else if (camp == "jud"){
-            judP.style.backgroundColor = "grey";
+            judP.style.backgroundColor = "black";
             judP.style.color = "red";
             judP.textContent = `Selecteaza un judet`;
             judP.style.bottom = "10%";
@@ -333,7 +335,7 @@ IMPORTANTE.forEach(camp => {
     elem.addEventListener("blur", function() {
         const element = document.getElementById(camp);
         if (camp == "numele") {
-            numeP.style.background = "white";
+            numeP.style.background = "initial";
             if (element.value.trim().length < 3){
                 numeP.style.color = "red";
                 numeP.textContent = "✘";
@@ -362,7 +364,7 @@ IMPORTANTE.forEach(camp => {
                         }
                     }
                     else{
-                        numeP.style.color = "green";
+                        numeP.style.color = "blue";
                         numeP.textContent = "✓";
                         elemente_importante[camp] = true;
                     }
@@ -370,7 +372,7 @@ IMPORTANTE.forEach(camp => {
             }
         }
         else if (camp == "prenumele"){
-            prenumeP.style.background = "white";
+            prenumeP.style.background = "initial";
             if (element.value.trim().length < 3){
                 prenumeP.style.color = "red";
                 prenumeP.textContent = "✘";
@@ -382,7 +384,7 @@ IMPORTANTE.forEach(camp => {
                 for (var i = 0; i < element.value.length; i++){
                     if (!isNaN(element.value.trim()[i]) || element.value.trim().length < 3){
                         if (element.value.trim()[i] == " "){
-                            prenumeP.style.color = "green";
+                            prenumeP.style.color = "blue";
                             prenumeP.textContent = "✓";
                         }
                         else{
@@ -395,7 +397,7 @@ IMPORTANTE.forEach(camp => {
                         }
                     }
                     else{
-                        prenumeP.style.color = "green";
+                        prenumeP.style.color = "blue";
                         prenumeP.textContent = "✓";
                     }
                 }
@@ -403,7 +405,7 @@ IMPORTANTE.forEach(camp => {
         }
         else if (camp == "strada"){
             let contor = 0;
-            stradaP.style.backgroundColor = "white";
+            stradaP.style.backgroundColor = "initial";
             stradaP.style.position = "static";
             stradaP.style.display = "inline-block";
             if (element.value.trim().length < 3){
@@ -437,7 +439,7 @@ IMPORTANTE.forEach(camp => {
                         }
                     }
                     else{
-                        stradaP.style.color = "green";
+                        stradaP.style.color = "blue";
                         stradaP.innerHTML = `✓`;
                         elemente_importante[camp] = true;
                     }
@@ -445,7 +447,7 @@ IMPORTANTE.forEach(camp => {
             }
         }
         else if (camp == "numarul"){
-            numarulP.style.backgroundColor = "white";
+            numarulP.style.backgroundColor = "initial";
             numarulP.style.position = "static";
             numarulP.style.display = "inline-block";
             numarulP.style.color = "red";
@@ -464,7 +466,7 @@ IMPORTANTE.forEach(camp => {
             else{
                 for (var i = 0; i <= element.value.trim().length; i++){
                     if (!isNaN(element.value.trim()[i])){
-                        numarulP.style.color = "green";
+                        numarulP.style.color = "blue";
                         numarulP.innerHTML = `✓`
                         break;
                     }
@@ -479,7 +481,7 @@ IMPORTANTE.forEach(camp => {
         }
         else if (camp == "localitate"){
             let contor = 0;
-            localitateP.style.backgroundColor = "white";
+            localitateP.style.backgroundColor = "initial";
             localitateP.style.position = "static";
             localitateP.style.display = "inline-block";
             if (element.value.trim().length < 3){
@@ -513,7 +515,7 @@ IMPORTANTE.forEach(camp => {
                         }
                     }
                     else{
-                        localitateP.style.color = "green";
+                        localitateP.style.color = "blue";
                         localitateP.innerHTML = `✓`;
                         elemente_importante[camp] = true;
                     }
@@ -521,7 +523,7 @@ IMPORTANTE.forEach(camp => {
             }
         }
         else if (camp == "jud"){
-            judP.style.backgroundColor = "white";
+            judP.style.backgroundColor = "initial";
             judP.style.color = "red";
             judP.style.position = "static";
             judP.style.display = "inline-block";
@@ -530,7 +532,7 @@ IMPORTANTE.forEach(camp => {
             alert(`La campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} te rog selecteaza un judet`);
         }
         else{
-            judP.style.color = "green";
+            judP.style.color = "blue";
             judP.innerHTML = `✓`;
         }
         }
