@@ -1,4 +1,5 @@
 document.getElementById("butonul").style.display = "none";
+import { activareDate } from "./backEnd.js";
 
 const IMPORTANTE = ["numele", "prenumele", "strada", "numarul", "localitate", "jud"]; // cele marcate din html cu *
 // ---------------------------------------------------------------------------//
@@ -28,6 +29,7 @@ let elemente_importante = {
 function generareButton(){
     // Genereare el. html de tip button daca toate elemente_importante sunt adevarate!
     if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
+        activareDate();
         return document.getElementById("butonul").style.display = "block";
     }
     else {
@@ -215,7 +217,7 @@ fiecare camp (din toate elementele de tip input)
             numarulP.innerHTML = `✘`;
             elemente_importante[camp] = false;
         }
-        else if (element.value.trim().length > 4){
+        else if (element.value.trim().length >= 4){
             numarulP.innerHTML = `✘`;
             elemente_importante[camp] = false;
         }
@@ -448,7 +450,7 @@ IMPORTANTE.forEach(camp => {
                 element.value = "";
                 document.getElementById("blocul").focus()
             }
-            else if (element.value.trim().length > 4){
+            else if (element.value.trim().length >= 4){
                 numarulP.innerHTML = `✘`
                 alert(`Campul ${camp.charAt(0).toUpperCase() + camp.slice(1)} prea multe caractere`);
                 element.value = "";
