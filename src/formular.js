@@ -29,8 +29,8 @@ let elemente_importante = {
 function generareButton(){
     // Genereare el. html de tip button daca toate elemente_importante sunt adevarate!
     if (Object.values(elemente_importante).every(elem1 => elem1 == true)){
-        activareDate();
-        return document.getElementById("butonul").style.display = "block";
+        document.getElementById("butonul").style.display = "block";
+        return document.getElementById("butonul").addEventListener("click", activareDate);
     }
     else {
         return document.getElementById("butonul").style.display = "none";
